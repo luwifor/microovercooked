@@ -1,42 +1,35 @@
 package com.demo.overcook.menu.model;
 
-import javax.persistence.Id;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NonNull;
-import lombok.Setter;
-
-import javax.persistence.Table;
-import javax.validation.constraints.NotEmpty;
-import java.io.Serializable;
 import java.util.List;
+import javax.validation.constraints.NotEmpty;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
 
+@Data
 @AllArgsConstructor
-@Getter
-@Setter
-@Table(name = "dish")
-public class Dish implements Serializable {
+@NoArgsConstructor
+public class Dish {
 
-    @NonNull
-    @NotEmpty
-    @Id
-    private String id;
+  @NonNull
+  @NotEmpty
+  private String id;
 
-    @NonNull
-    @NotEmpty
-    private String name;
+  @NonNull
+  @NotEmpty
+  private String name;
 
-    @NonNull
-    @NotEmpty
-    private String description;
+  @NonNull
+  @NotEmpty
+  private String description;
 
-    @NonNull
-    @NotEmpty
-    private List<String> ingredients;
+  @NonNull
+  @NotEmpty
+  private List<String> ingredients;
 
-    @NonNull
-    @NotEmpty
-    private Long cookingTime;
+  @NonNull
+  @NotEmpty
+  private Long cookingTime;
 
-    private static final long serialVersionUID = 1285454306356845811L;
 }

@@ -21,7 +21,7 @@ public class MenuController {
 
   @GetMapping(path = "/listMenu")
   public Mono<Menu> listAvailableMenu() {
-    return null;
+    return menuService.listMenu();
   }
 
   @GetMapping(path = "/dish")
@@ -30,8 +30,8 @@ public class MenuController {
   }
 
   @PostMapping(path = "/createDishMenu")
-  public Mono<Dish> createDish(@RequestBody Dish dish) {
-    return null;
+  public Mono<Boolean> createDish(@RequestBody Dish dish) {
+    return menuService.createDish(dish);
   }
 
 }
