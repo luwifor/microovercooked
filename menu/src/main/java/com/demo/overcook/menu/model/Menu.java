@@ -3,12 +3,9 @@ package com.demo.overcook.menu.model;
 import java.io.Serializable;
 import java.util.List;
 import javax.validation.constraints.NotEmpty;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
-import lombok.Setter;
+
+import lombok.*;
+import org.springframework.data.redis.core.RedisHash;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -16,8 +13,6 @@ import lombok.Setter;
 @Setter
 @Builder
 public class Menu implements Serializable {
-
-  private String id;
 
   @NonNull
   @NotEmpty
